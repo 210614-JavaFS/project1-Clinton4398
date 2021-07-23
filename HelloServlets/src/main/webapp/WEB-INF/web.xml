@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>HelloServlets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<description></description><!-- Optional tag -->
+  	<display-name>HelloServlet</display-name> <!-- Optional tag -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>com.revature.servlets.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> 
+  	<servlet-name>HelloServlet</servlet-name> <!-- This is the servlet (declared above) that will
+  	handle the request. -->
+  	<url-pattern>/hello</url-pattern><!-- This is the url (after the base url) that requests will 
+  	be sent to, to be handled by the servlet. (The endpoint.) -->
+  </servlet-mapping>
+  
+  
+</web-app>
