@@ -1,5 +1,5 @@
 package com.revature.Models;
 
-public enum EmpeeRole {
+public class LOGIN {
 
 }

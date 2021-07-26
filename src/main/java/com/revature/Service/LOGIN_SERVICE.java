@@ -1,5 +1,5 @@
 package com.revature.Service;
 
-public class EmpeeService {
+public class LOGIN_SERVICE {
 
 }
