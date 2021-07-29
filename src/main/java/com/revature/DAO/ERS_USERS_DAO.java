@@ -13,7 +13,7 @@ public interface ERS_USERS_DAO
 	public ERS_USERS getUsersById(int ers_users_id );
 	public ERS_USERS getUsersById(String ers_username);
 	public List<ERS_USERS> getAllUsers();
-	public void updateUsers(ERS_USERS ers_users, EmpeeField field, String newVal);
+	public void updateUsers(ERS_USERS ers_users, ErsUserField field, String newVal);
 	public void updateUsers(ERS_USERS ers_users, ERS_USER_ROLES ers_user_role_id);
 	public void deleteusers(ERS_USERS ers_users);
 	
