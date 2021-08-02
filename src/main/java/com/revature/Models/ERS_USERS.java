@@ -2,13 +2,17 @@ package com.revature.Models;
 
 public class ERS_USERS
 {
-	int ers_users_id;
-	String ers_username;
-	String ers_password;
-	String user_first_name;
-	String user_last_name;
-	String user_email;
-	int user_role_id;
+	static int ers_users_id;
+	static String ers_username;
+	static String ers_password;
+	static String user_first_name;
+	static String user_last_name;
+	static String user_email;
+	static int user_role_id;
+	
+	public ERS_USERS() {
+		
+	}
 	
 	public ERS_USERS(int ers_users_id, String ers_username, String ers_password, String user_first_name,
 			String user_last_name, String user_email, int user_role_id) {
@@ -23,7 +27,7 @@ public class ERS_USERS
 	}	
 	
 	
-	public int getErs_users_id() {
+	public static int getErs_users_id() {
 		return ers_users_id;
 	}
 	
@@ -31,7 +35,7 @@ public class ERS_USERS
 		this.ers_users_id = ers_users_id;
 	}
 	
-	public String getErs_username() {
+	public static String getErs_username() {
 		return ers_username;
 	}
 	
@@ -39,7 +43,7 @@ public class ERS_USERS
 		this.ers_username = ers_username;
 	}
 	
-	public String getErs_password() {
+	public static String getErs_password() {
 		return ers_password;
 	}
 	
@@ -47,7 +51,7 @@ public class ERS_USERS
 		this.ers_password = ers_password;
 	}
 	
-	public String getUser_first_name() {
+	public static String getUser_first_name() {
 		return user_first_name;
 	}
 	
@@ -55,7 +59,7 @@ public class ERS_USERS
 		this.user_first_name = user_first_name;
 	}
 	
-	public String getUser_last_name() {
+	public static String getUser_last_name() {
 		return user_last_name;
 	}
 	
@@ -63,7 +67,7 @@ public class ERS_USERS
 		this.user_last_name = user_last_name;
 	}
 	
-	public String getUser_email() {
+	public static String getUser_email() {
 		return user_email;
 	}
 	
@@ -71,7 +75,7 @@ public class ERS_USERS
 		this.user_email = user_email;
 	}
 	
-	public int getUser_role_id() {
+	public static int getUser_role_id() {
 		return user_role_id;
 	}
 	

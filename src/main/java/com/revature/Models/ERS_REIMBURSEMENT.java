@@ -9,14 +9,13 @@ public class ERS_REIMBURSEMENT
 	protected Timestamp reimb_submitted;
 	protected Timestamp reimb_resolved;
 	protected String reimb_description;
-	protected byte reimb_reciept;
 	protected int reimb_author;
 	protected int reimb_resolver;
-	protected int reimb_status_id;
+	protected ERS_REIMBURSEMENT_STATUS reimb_status_id;
 	protected int reimb_type_id;
 	
 	public ERS_REIMBURSEMENT(int reimb_id, double reimb_amount, Timestamp reimb_submitted, Timestamp reimb_resolved,
-			String reimb_description, byte reimb_reciept, int reimb_author, int reimb_resolver, int reimb_status_id,
+			String reimb_description, byte reimb_reciept, int reimb_author, int reimb_resolver, ERS_REIMBURSEMENT_STATUS reimb_status_id,
 			int reimb_type_id) {
 		super();
 		this.reimb_id = reimb_id;
@@ -24,7 +23,6 @@ public class ERS_REIMBURSEMENT
 		this.reimb_submitted = reimb_submitted;
 		this.reimb_resolved = reimb_resolved;
 		this.reimb_description = reimb_description;
-		this.reimb_reciept = reimb_reciept;
 		this.reimb_author = reimb_author;
 		this.reimb_resolver = reimb_resolver;
 		this.reimb_status_id = reimb_status_id;
@@ -76,13 +74,6 @@ public class ERS_REIMBURSEMENT
 		this.reimb_description = reimb_description;
 	}
 
-	public byte getReimb_reciept() {
-		return reimb_reciept;
-	}
-
-	public void setReimb_reciept(byte reimb_reciept) {
-		this.reimb_reciept = reimb_reciept;
-	}
 
 	public int getReimb_author() {
 		return reimb_author;
@@ -100,11 +91,11 @@ public class ERS_REIMBURSEMENT
 		this.reimb_resolver = reimb_resolver;
 	}
 
-	public int getReimb_status_id() {
+	public ERS_REIMBURSEMENT_STATUS getReimb_status_id() {
 		return reimb_status_id;
 	}
 
-	public void setReimb_status_id(int reimb_status_id) {
+	public void setReimb_status_id(ERS_REIMBURSEMENT_STATUS reimb_status_id) {
 		this.reimb_status_id = reimb_status_id;
 	}
 
@@ -116,6 +107,8 @@ public class ERS_REIMBURSEMENT
 		this.reimb_type_id = reimb_type_id;
 	}
 
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -126,10 +119,9 @@ public class ERS_REIMBURSEMENT
 		result = prime * result + reimb_author;
 		result = prime * result + ((reimb_description == null) ? 0 : reimb_description.hashCode());
 		result = prime * result + reimb_id;
-		result = prime * result + reimb_reciept;
 		result = prime * result + ((reimb_resolved == null) ? 0 : reimb_resolved.hashCode());
 		result = prime * result + reimb_resolver;
-		result = prime * result + reimb_status_id;
+		result = prime * result + ((reimb_status_id == null) ? 0 : reimb_status_id.hashCode());
 		result = prime * result + ((reimb_submitted == null) ? 0 : reimb_submitted.hashCode());
 		result = prime * result + reimb_type_id;
 		return result;
@@ -155,8 +147,6 @@ public class ERS_REIMBURSEMENT
 			return false;
 		if (reimb_id != other.reimb_id)
 			return false;
-		if (reimb_reciept != other.reimb_reciept)
-			return false;
 		if (reimb_resolved == null) {
 			if (other.reimb_resolved != null)
 				return false;
@@ -164,7 +154,10 @@ public class ERS_REIMBURSEMENT
 			return false;
 		if (reimb_resolver != other.reimb_resolver)
 			return false;
-		if (reimb_status_id != other.reimb_status_id)
+		if (reimb_status_id == null) {
+			if (other.reimb_status_id != null)
+				return false;
+		} else if (!reimb_status_id.equals(other.reimb_status_id))
 			return false;
 		if (reimb_submitted == null) {
 			if (other.reimb_submitted != null)
@@ -180,7 +173,7 @@ public class ERS_REIMBURSEMENT
 	public String toString() {
 		return "ERS_REIMBURSEMENT [reimb_id=" + reimb_id + ", reimb_amount=" + reimb_amount + ", reimb_submitted="
 				+ reimb_submitted + ", reimb_resolved=" + reimb_resolved + ", reimb_description=" + reimb_description
-				+ ", reimb_reciept=" + reimb_reciept + ", reimb_author=" + reimb_author + ", reimb_resolver="
+				+  ", reimb_author=" + reimb_author + ", reimb_resolver="
 				+ reimb_resolver + ", reimb_status_id=" + reimb_status_id + ", reimb_type_id=" + reimb_type_id + "]";
 	}
 

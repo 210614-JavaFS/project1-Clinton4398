@@ -15,4 +15,9 @@ public class LOGIN_SERVICE {
 		{
 				this.LDI = LoginDAOImpl.getLoginDAOImpl();
 		}
+
+		public static LOGIN_SERVICE getLoginService() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }
